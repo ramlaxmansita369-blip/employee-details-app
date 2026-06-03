@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Employee Portal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1> Employee Portal Management</h1>
+
+<div class="card">
+
+<h2>Employee Registration</h2>
+
+<input type="text" id="name" placeholder="Employee Name">
+
+<input type="email" id="email" placeholder="Email">
+
+<input type="date" id="birthday">
+
+<button onclick="registerEmployee()">
+SIGN UP
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Attendance</h2>
+
+<button onclick="loginAttendance()">
+Login
+</button>
+
+<button onclick="logoutAttendance()">
+Logout
+</button>
+
+<p id="attendanceStatus"></p>
+
+</div>
+
+<div class="card">
+
+<h2>Apply Leave</h2>
+
+<input type="date" id="leaveDate">
+
+<textarea id="leaveReason"
+placeholder="Reason">
+</textarea>
+
+<button onclick="applyLeave()">
+Submit Leave
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Daily Work Report</h2>
+
+<textarea id="workReport"
+placeholder="Today's Work Report">
+</textarea>
+
+<button onclick="submitReport()">
+Submit Report
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>Birthday Reminders</h2>
+
+<ul id="birthdayList"></ul>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
