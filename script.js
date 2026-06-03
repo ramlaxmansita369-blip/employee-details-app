@@ -11,23 +11,4 @@ const firebaseConfig = {
   measurementId: "G-JSXRRMCXN0"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
 
-// Initialize Firestore and export it for use in other files
-export const db = getFirestore(app);
-import { db } from "./firebase-config.js";
-import { collection, addDoc } from "firebase/firestore";
-
-// Example: Adding an employee
-async function addEmployee(name, role) {
-  try {
-    const docRef = await addDoc(collection(db, "employees"), {
-      name: name,
-      role: role
-    });
-    console.log("Document written with ID: ", docRef.id);
-  } catch (e) {
-    console.error("Error adding document: ", e);
-  }
-}
